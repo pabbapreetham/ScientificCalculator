@@ -9,16 +9,9 @@ class calculator(Tk):
         super().__init__()
 
         self.title('Scientific Calculator')
-        self.geometry('410x410')
-        self.configure(background="white")
+        self.geometry('410x600')  # Adjusted height for better visibility
+        self.configure(background="#f0f0f0")  # Set background color
         self.string = StringVar()
-        entry = Entry(self, textvariable=self.string)
-        entry.grid(row=0, column=0, columnspan=6)
-        entry.configure(background="white")        
-
-
-calculator()
-
-
-  
-        
+        entry = Entry(self, textvariable=self.string, font=('Arial', 14))
+        entry.grid(row=0, column=0, columnspan=6, pady=10, ipady=10, sticky='nsew')
+        entry.configure(background="white")
