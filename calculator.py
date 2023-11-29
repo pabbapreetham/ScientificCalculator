@@ -66,3 +66,6 @@ class calculator(Tk):
 
             col = col + 1
             i = i + 1
+
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=1)
