@@ -77,3 +77,29 @@ class calculator(Tk):
         self.grid_columnconfigure(0, weight=1)
 
         self.mainloop()
+
+    def clearall(self):
+        self.string.set("")
+
+    def equals(self):
+        result = ""
+
+        try:
+            result = eval(self.string.get())
+            self.string.set(result)
+        except:
+            result = "INVALID INPUT"
+        self.string.set(result)
+
+    def addChar(self, char):
+        self.string.set(self.string.get() + (str(char)))
+
+    def delete(self):
+        self.string.set(self.string.get()[0:-1])
+
+    def dark_mode_(self):
+        self.config(bg='grey')
+        
+
+
+calculator()
