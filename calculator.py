@@ -66,3 +66,14 @@ class calculator(Tk):
 
             col = col + 1
             i = i + 1
+
+        Menue_1 = Menu(self)
+        dark_mode = Menu(Menue_1, tearoff=False)
+        dark_mode.add_command(label='Dark Mode', command=self.dark_mode_)
+        self.config(menu=Menue_1)
+        Menue_1.add_cascade(label='Dark Mode', menu=dark_mode)
+
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+
+        self.mainloop()
